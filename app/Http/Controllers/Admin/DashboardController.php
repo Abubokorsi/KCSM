@@ -19,8 +19,7 @@ class DashboardController extends Controller
             if($is_admin == 1){
                 return view('admin.dashboard');
             }elseif($is_admin==0){
-                $user_profiles=UserProfile::all();
-                return view('dashboard', compact('user_profiles'));
+                return view('dashboard');
             }else{
                 return redirect()->back();
             }

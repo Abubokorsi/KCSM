@@ -74,16 +74,6 @@
           <!-- /.col -->
         </div>
       </form>
-      <div class="social-auth-links">
-        <a href="#" class="text-primary d-block">
-          <i class="fab fa-facebook mr-2"></i>
-          Sign up using Facebook
-        </a>
-        <a href="#" class=" text-primary d-block">
-          <i class="fab fa-google-plus mr-2"></i>
-          Sign up using Google+
-        </a>
-      </div>
       <a href="{{route('login')}}" class="text-center">I already have a membership</a>
     </div>
     <!-- /.form-box -->

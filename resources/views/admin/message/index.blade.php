@@ -56,13 +56,13 @@
                           }">confirm</a>
 
                           @elseif($message->status == 1)
-                          <form action="complet{{$message->id}}" method="POST" id="complete{{$message->id}}">
+                          <form action="dismis{{$message->id}}" method="POST" id="dismise{{$message->id}}">
                             @csrf
                           </form>
 
                           <a href="" class="btn btn-primary btn-sm" onclick="if(confirm('are you sure to complet this ?')){
                             event.preventDefault();
-                            document.getElementById('complete{{$message->id}}').submit();
+                            document.getElementById('dismise{{$message->id}}').submit();
                           }">Completed</a>
 
                           @else

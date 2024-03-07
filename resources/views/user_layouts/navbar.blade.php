@@ -8,21 +8,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="/" class="nav-item nav-link ">Home</a>
-                    <a href="/about" class="nav-item nav-link">About</a>
-                    <a href="/service" class="nav-item nav-link">Services</a>
-                    <a href="/package" class="nav-item nav-link">Packages</a>
-                    <a href="/booking" class="nav-item nav-link">Booking</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="/destination" class="dropdown-item">Destination</a>
-                            <a href="/booking" class="dropdown-item">Booking</a>
-                            <a href="/team" class="dropdown-item">Travel Guides</a>
-                            <a href="/testimonial" class="dropdown-item">Testimonial</a>
-                        </div>
-                    </div>
-                    <a href="/contact" class="nav-item nav-link">Contact</a>
+                    <a href="/" class="nav-item nav-link @if(Request::segment(1)=='') active @endif">Home</a>
+                    <a href="/about" class="nav-item nav-link @if(Request::segment(1)=='about') active @endif">About</a>
+                    <a href="/service" class="nav-item nav-link @if(Request::segment(1)=='service') active @endif">Services</a>
+                    <a href="/package" class="nav-item nav-link @if(Request::segment(1)=='package') active @endif">Packages</a>
+                    <a href="/booking" class="nav-item nav-link @if(Request::segment(1)=='booking') active @endif">Booking</a>
+                    <a href="/contact" class="nav-item nav-link @if(Request::segment(1)=='contact') active @endif">Contact</a>
                 </div>
                 <a href="{{route('register')}}" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
                 <a href="{{route('login')}}" class="btn btn-primary rounded-pill py-2 px-4">Login</a>

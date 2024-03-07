@@ -99,7 +99,7 @@ class MessageController extends Controller
         return redirect()->route('message.index');
 
     }
-    public function completed($id){
+    public function dismis($id){
         $message=Message::find($id);
         $message->status=2;
         $message->save();

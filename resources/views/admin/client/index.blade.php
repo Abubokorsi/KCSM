@@ -16,7 +16,7 @@
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">ALL client Data </h3>
-    <a href="{{route('client.create')}}" class="btn btn-info float-right">ADD</a>
+    <a href="{{route('client.create')}}" class="btn btn-info float-right">ADD client Data</a>
   </div>
   <!-- /.card-header -->
   <div class="card-body">

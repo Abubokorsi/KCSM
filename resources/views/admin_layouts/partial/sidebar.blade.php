@@ -24,198 +24,70 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="{{url('admin/dashboard')}}" class="nav-link @if(Request::segment(2)=='dashboard') active @endif">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Manage Topbar
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
+            <a href="{{route('topbar.index')}}" class="nav-link @if(Request::segment(2)=='topbar') active @endif">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Topbar Data</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('topbar.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Topbar Data</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('topbar.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create Topbar</p>
-                </a>
-              </li>
-              
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Manage destination
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
+            <a href="{{route('destination.index')}}" class="nav-link @if(Request::segment(2)=='destination') active @endif">
+              <i class="fa fa-map-marker nav-icon"></i>
+              <p>destination Data</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('destination.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>destination Data</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('destination.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create destination</p>
-                </a>
-              </li>
-              
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Manage package
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
+            <a href="{{route('package.index')}}" class="nav-link @if(Request::segment(2)=='package') active @endif">
+              <i class="fas fa-user-friends nav-icon"></i>
+              <p>Packages Data</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('package.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>package Data</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('package.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create package</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('booking.index')}}" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <a href="{{route('booking.index')}}" class="nav-link @if(Request::segment(2)=='booking') active @endif">
+            <i class="far fa-circle nav-icon"></i>
               <p>All Booking</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('message.index')}}" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <a href="{{route('message.index')}}" class="nav-link @if(Request::segment(2)=='message') active @endif">
+            <i class="fas fa-comment-alt nav-icon"></i>
               <p>All message</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Manage guide
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
+            <a href="{{route('guide.index')}}" class="nav-link @if(Request::segment(2)=='guide') active @endif">
+              <i class="far fa-user nav-icon"></i>
+              <p>guide Data</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('guide.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>guide Data</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('guide.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create guide</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Manage client
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
+            <a href="{{route('client.index')}}" class="nav-link @if(Request::segment(2)=='client') active @endif">
+              <i class="far fa-user nav-icon"></i>
+              <p>client Data</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('client.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>client Data</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('client.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create client</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Manage contact info
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
+            <a href="{{route('contact.index')}}" class="nav-link @if(Request::segment(2)=='contact') active @endif">
+              <i class="nav-icon fa fa-address-book"></i>
+              <p>  contact Data</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('contact.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>contact Data</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('contact.create')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create contact</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                settings
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
+            <form action="{{route('logout')}}" method="POST" id="logout">
+              @csrf
+            </form>
+            <a type="submit" class="nav-link" onclick="event.preventDefault();
+            document.getElementById('logout').submit();
+            ">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>Logout</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <form action="{{route('logout')}}" method="POST" id="logout">
-                  @csrf
-                </form>
-                <a type="submit" class="nav-link" onclick="event.preventDefault();
-                document.getElementById('logout').submit();
-                ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Logout</p>
-                </a>
-              </li>
-            </ul>
           </li>
         </ul>
       </nav>

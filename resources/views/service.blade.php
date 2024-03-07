@@ -115,6 +115,7 @@
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
                 <h1 class="mb-5">Our Clients Say!!!</h1>
+                <a href="/testimonial" class="mb-4 d-inline-block">See All</a>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 @foreach($clients as $client)

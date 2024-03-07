@@ -70,7 +70,7 @@ Route::group(['prefix'=> 'admin', 'middleware'=>'verified','auth','is_admin'], f
     Route::resource('userprofile', UserDashboardController::class);
 
     Route::post('reply{id}', [MessageController::class, 'reply']);
-    Route::post('complet{id}', [MessageController::class, 'completed']);
+    Route::post('dismis{id}', [MessageController::class, 'dismis']);
 
     Route::post('confirm{id}', [BookingsController::class, 'confirm']);
     Route::post('complet{id}', [BookingsController::class, 'completed']);
